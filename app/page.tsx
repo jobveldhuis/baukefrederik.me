@@ -1,91 +1,53 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import { Playfair_Display } from "@next/font/google";
+import Link from "next/link";
+import { ClientWrapper } from "./client-wrapper";
 
-const inter = Inter({ subsets: ['latin'] })
+const heading = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <ClientWrapper>
+      <>
+        <h1 className={`${heading.className} text-5xl mb-1`}>Hello.</h1>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          <span className="font-bold">My name is Job</span>. I am a full-stack software engineer and
+          author, based in Harderwijk, The Netherlands. In open source, I mainly build Ratio, a
+          Python framework for web applications, which is currently being developed and not fully
+          production ready. You can find it on{" "}
+          <Link href="https://pypi.org/project/ratio/" target="_blank">
+            Pypi
+          </Link>{" "}
+          and my{" "}
+          <Link href="https://github.com/jobveldhuis/ratio" target="_blank">
+            GitHub
+          </Link>
+          .
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <p>
+          I have published two detective novels in Dutch:{" "}
+          <Link href="https://www.bol.com/nl/nl/f/inspecteur-vos/9200000120774059/" target="_blank">
+            Inspecteur&nbsp;Vos
+          </Link>{" "}
+          and{" "}
+          <Link href="https://www.bol.com/nl/nl/p/de-laatste-dag/9300000007440350/" target="_blank">
+            De&nbsp;Laatste&nbsp;Dag
+          </Link>
+          . My first poetry bundle, De Lotus en de Koekoek, is expected to release somewhere this
+          year. You can follow me on{" "}
+          <Link href="https://twitter.com/baukefrederik" target="_blank">
+            Twitter
+          </Link>{" "}
+          to stay tuned.
+        </p>
+        <p>
+          As pastime, I love to play and referee the beautiful Dutch sport of korfball.
+          Occasionally, I also play some futsal and from time to time I sell some custom designed
+          apparel via my webshop, <Link href="https://deregering.info">De&nbsp;Regering</Link>.
+        </p>
+      </>
+    </ClientWrapper>
+  );
 }

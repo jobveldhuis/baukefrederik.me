@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: #fff;
+  @apply bg-white;
 }
 
 h1 {
@@ -18,12 +18,43 @@ h1 {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply relative;
+  @apply overflow-hidden;
+  @apply no-underline;
+  @apply text-secondary;
+  @apply font-bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 0.75rem;
+  bottom: -0.375rem;
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  background: rgba(16, 27, 105, 0.25);
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+a:hover:after, a:focus:after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  @apply font-light;
+  @apply text-lg;
+  @apply leading-8;
+  @apply z-10;
+}
+
+::-moz-selection {
+  @apply bg-primary;
+}
+
+::selection {
+  @apply bg-primary;
 }
