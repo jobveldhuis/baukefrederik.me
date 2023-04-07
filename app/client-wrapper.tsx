@@ -59,7 +59,7 @@ export function ClientWrapper({ children }: { children: ReactNode }) {
       </div>
       <div
         ref={overlayRef}
-        className="h-full relative flex content-center top-[100%] bg-white text-black bg-pattern bg-center"
+        className="h-fit relative flex content-center top-[100%] bg-white text-black bg-pattern bg-center"
       >
         <div className="flex flex-col gap-8 w-[65ch] p-8 md:pt-24 my-0 mx-auto">{children}</div>
       </div>
