@@ -41,7 +41,7 @@ export function ClientWrapper({ children }: { children: ReactNode }) {
 
   return (
     <main className={`${primary.className} h-full w-full`}>
-      <div className="h-[100lvh] w-full text-primary bg-secondary fixed">
+      <div className="h-[100svh] w-full text-primary bg-secondary fixed">
         <div
           style={{ opacity: `${overlayOpacity}` }}
           className={`bg-black absolute h-full w-full`}
