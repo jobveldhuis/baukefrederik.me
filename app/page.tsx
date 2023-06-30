@@ -42,11 +42,6 @@ export default function Home() {
           </Link>{" "}
           to stay tuned.
         </p>
-        <p>
-          As pastime, I love to play and referee the beautiful Dutch sport of korfball.
-          Occasionally, I also play some futsal and from time to time I sell some custom designed
-          apparel via my webshop, <Link href="https://deregering.info">De&nbsp;Regering</Link>.
-        </p>
       </>
     </ClientWrapper>
   );
