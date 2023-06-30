@@ -28,11 +28,11 @@ export default function Home() {
         </p>
         <p>
           I have published two detective novels in Dutch:{" "}
-          <Link href="https://www.bol.com/nl/nl/f/inspecteur-vos/9200000120774059/" target="_blank">
+          <Link href="https://www.hoekstraenveldhuis.nl/products/inspecteur-vos" target="_blank">
             Inspecteur&nbsp;Vos
           </Link>{" "}
           and{" "}
-          <Link href="https://www.bol.com/nl/nl/p/de-laatste-dag/9300000007440350/" target="_blank">
+          <Link href="https://www.hoekstraenveldhuis.nl/products/de-laatste-dag" target="_blank">
             De&nbsp;Laatste&nbsp;Dag
           </Link>
           . My first poetry bundle, De Lotus en de Koekoek, is expected to release somewhere this
