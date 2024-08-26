@@ -18,36 +18,20 @@ h1 {
 }
 
 a {
-  @apply relative;
-  @apply overflow-hidden;
   @apply no-underline;
   @apply text-secondary;
+  @apply text-opacity-75;
   @apply font-bold;
 }
 
-a::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  left: 0.75rem;
-  bottom: -0.375rem;
-  width: calc(100% - 0.5rem);
-  height: calc(100% - 0.5rem);
-  background: rgba(16, 27, 105, 0.25);
-  transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
-}
-
-a:hover:after, a:focus:after {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+a:hover {
+  @apply underline;
+  @apply text-opacity-100
 }
 
 p {
   @apply font-light;
-  @apply text-lg;
-  @apply leading-8;
+  @apply leading-relaxed;
   @apply z-10;
 }
 

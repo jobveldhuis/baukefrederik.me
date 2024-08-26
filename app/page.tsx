@@ -1,48 +1,37 @@
-import { Playfair_Display } from "@next/font/google";
 import Link from "next/link";
-import { ClientWrapper } from "./client-wrapper";
-
-const heading = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700"],
-});
 
 export default function Home() {
   return (
-    <ClientWrapper>
-      <>
-        <h1 className={`${heading.className} text-5xl mb-1`}>Hello.</h1>
+    <>
+      <h1 className="text-xl mb-1 font-bold mb-4">Hi, my name is Job 👋</h1>
+      <div className="flex flex-col gap-6">
         <p>
-          <span className="font-bold">My name is Job</span>. I am a full-stack software engineer and
-          author, based in Harderwijk, The Netherlands. In open source, I mainly build Ratio, a
-          Python framework for web applications, which is currently being developed and not fully
-          production ready. You can find it on{" "}
-          <Link href="https://pypi.org/project/ratio/" target="_blank">
-            Pypi
+          By day, I work as a{" "}
+          <Link href="https://github.com/jobveldhuis/" rel="nofollow">
+            full-stack software engineer
           </Link>{" "}
-          and my{" "}
-          <Link href="https://github.com/jobveldhuis/ratio" target="_blank">
-            GitHub
-          </Link>
-          .
+          and by night, I{" "}
+          <Link href="https://hoekstraenveldhuis.nl/over/job-veldhuis">write books</Link>. Last
+          year, I started an indie publishing company with a friend, called{" "}
+          <Link href="https://hoekstraenveldhuis.nl">Uitgeverij Hoekstra & Veldhuis</Link>.
         </p>
         <p>
           I have published two detective novels in Dutch:{" "}
-          <Link href="https://www.hoekstraenveldhuis.nl/products/inspecteur-vos" target="_blank">
-            Inspecteur&nbsp;Vos
+          <Link href="https://hoekstraenveldhuis.nl/product/inspecteur-vos" target="_blank">
+            Inspecteur Vos
           </Link>{" "}
           and{" "}
-          <Link href="https://www.hoekstraenveldhuis.nl/products/de-laatste-dag" target="_blank">
-            De&nbsp;Laatste&nbsp;Dag
+          <Link href="https://hoekstraenveldhuis.nl/product/de-laatste-dag" target="_blank">
+            De Laatste Dag
           </Link>
           . My first poetry bundle, De Lotus en de Koekoek, is expected to release somewhere this
-          year. You can follow me on{" "}
-          <Link href="https://twitter.com/baukefrederik" target="_blank">
-            Twitter
+          year. You can subscribe to{" "}
+          <Link href="https://hoekstraenveldhuis.nl/nieuwsbrief" target="_blank">
+            this Dutch newsletter
           </Link>{" "}
           to stay tuned.
         </p>
-      </>
-    </ClientWrapper>
+      </div>
+    </>
   );
 }

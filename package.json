@@ -1,6 +1,6 @@
 {
   "name": "baukefrederik.me",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,21 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-brands-svg-icons": "^6.3.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/font": "13.1.2",
-    "@next/mdx": "^13.2.4",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
-    "gray-matter": "^4.0.3",
-    "next": "^13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.4"
+    "next": "^14.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
@@ -31,5 +26,8 @@
     "prettier": "^2.8.6",
     "prettier-plugin-organize-imports": "^3.2.2",
     "tailwindcss": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
